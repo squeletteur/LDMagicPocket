@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GymLevel.unity
     guid: 39d56daf996959b4d8e787b81b5a80b7
+  - enabled: 1
+    path: Assets/Scenes/GreyBoxLevel.unity
+    guid: 0f52f34c507bc7340a9228ae6c6b5a57
+  - enabled: 1
+    path: Assets/Scenes/GreyBoxLevel.unity
+    guid: c38585e253c93fa4eb75afbc7b3286f5
   m_configObjects: {}

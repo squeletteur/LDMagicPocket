@@ -19,6 +19,7 @@ namespace Gamekit2D
         { }
 
         public int startingHealth = 5;
+        public bool invulnerable = false;
         public bool invulnerableAfterDamage = true;
         public float invulnerabilityDuration = 3f;
         public bool disableOnDeath = false;
@@ -96,7 +97,11 @@ namespace Gamekit2D
             //We still want the callback that we were hit, but not the damage to be removed from health.
             if (!m_Invulnerable)
             {
-                m_CurrentHealth -= damager.damage;
+                if (!invulnerable)
+                {
+                    m_CurrentHealth -= damager.damage;
+                }
+
                 OnHealthSet.Invoke(this);
             }
 
