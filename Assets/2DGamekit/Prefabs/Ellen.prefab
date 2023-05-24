@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 114621962236214084}
   m_Layer: 13
   m_Name: Ellen
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  invulnerable: 0
   invulnerableAfterDamage: 1
   invulnerabilityDuration: 3
   disableOnDeath: 0
