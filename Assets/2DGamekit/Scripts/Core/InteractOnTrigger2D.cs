@@ -10,6 +10,9 @@ namespace Gamekit2D
         public UnityEvent OnEnter, OnExit;
         public InventoryController.InventoryChecker[] inventoryChecks;
 
+        public bool isDestroyedAtTrigger = false;
+        public GameObject destroyedParticles = null;
+
         protected Collider2D m_Collider;
 
         void Reset()
@@ -27,6 +30,16 @@ namespace Gamekit2D
             if (layers.Contains(other.gameObject))
             {
                 ExecuteOnEnter(other);
+
+                if (isDestroyedAtTrigger)
+                {
+                    if (destroyedParticles != null)
+                    {
+                        Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+                    }
+
+                    Destroy(gameObject);
+                }
             }
         }
 

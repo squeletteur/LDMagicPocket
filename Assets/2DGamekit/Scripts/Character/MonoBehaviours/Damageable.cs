@@ -100,6 +100,7 @@ namespace Gamekit2D
                 if (!invulnerable)
                 {
                     m_CurrentHealth -= damager.damage;
+                    Debug.Log("my health:" + m_CurrentHealth);
                 }
 
                 OnHealthSet.Invoke(this);
@@ -121,6 +122,8 @@ namespace Gamekit2D
         public void GainHealth(int amount)
         {
             m_CurrentHealth += amount;
+
+            Debug.Log("my health:" + m_CurrentHealth);
 
             if (m_CurrentHealth > startingHealth)
                 m_CurrentHealth = startingHealth;
